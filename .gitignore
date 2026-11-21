@@ -1,0 +1,22 @@
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# MLflow local data
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Local tools
+hey.exe
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
