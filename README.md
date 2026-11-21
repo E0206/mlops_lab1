@@ -1,8 +1,8 @@
-\# Lab 1: Your First Model Service on Kubernetes
+# Lab 1: Your First Model Service on Kubernetes
 
 
 
-This repository contains the implementation of Lab 1 from \*\*MLOps Foundations \& Cloud Native AI\*\*.
+This repository contains the implementation of Lab 1 from **MLOps Foundations & Cloud Native AI**.
 
 
 
@@ -10,7 +10,7 @@ The project demonstrates an end-to-end MLOps workflow, including machine learnin
 
 
 
-\## 1. Project Overview
+## 1. Project Overview
 
 
 
@@ -26,31 +26,31 @@ Finally, an HPA is configured to scale the application based on CPU utilization,
 
 
 
-\## 2. Technologies
+## 2. Technologies
 
 
 
-\- Python 3.11
+- Python 3.11
 
-\- scikit-learn
+- scikit-learn
 
-\- MLflow
+- MLflow
 
-\- FastAPI and Uvicorn
+- FastAPI and Uvicorn
 
-\- Docker
+- Docker
 
-\- kind and Kubernetes
+- kind and Kubernetes
 
-\- kubectl
+- kubectl
 
-\- Kubernetes Metrics Server
+- Kubernetes Metrics Server
 
-\- hey (HTTP load testing)
+- hey (HTTP load testing)
 
 
 
-\## 3. Repository Structure
+## 3. Repository Structure
 
 
 
@@ -94,7 +94,7 @@ mlops-lab1/
 
 
 
-\## 4. Model Training and MLflow Tracking
+## 4. Model Training and MLflow Tracking
 
 
 
@@ -146,15 +146,15 @@ Open `http://localhost:5000` to inspect the `iris-classification` experiment.
 
 
 
-\### MLflow Run
+### MLflow Run
 
 
 
-!\[MLflow Run](screenshots/mlflow-run.png)
+![MLflow Run](screenshots/mlflow-run.png)
 
 
 
-\## 5. FastAPI Model Service
+## 5. FastAPI Model Service
 
 
 
@@ -192,9 +192,9 @@ Example prediction request:
 
 {
 
-&#x20; "instances": \[
+&#x20; "instances": [
 
-&#x20;   \[5.1, 3.5, 1.4, 0.2]
+&#x20;   [5.1, 3.5, 1.4, 0.2]
 
 &#x20; ]
 
@@ -212,7 +212,7 @@ Example response:
 
 {
 
-&#x20; "predictions": \[0]
+&#x20; "predictions": [0]
 
 }
 
@@ -220,7 +220,7 @@ Example response:
 
 
 
-\## 6. Docker Containerization
+## 6. Docker Containerization
 
 
 
@@ -240,7 +240,7 @@ The Dockerfile packages the trained model, FastAPI application, and inference de
 
 
 
-\## 7. Kubernetes Deployment
+## 7. Kubernetes Deployment
 
 
 
@@ -314,7 +314,7 @@ The prediction API is then accessible through `http://localhost:8081/predict`.
 
 
 
-\## 8. Horizontal Pod Autoscaling
+## 8. Horizontal Pod Autoscaling
 
 
 
@@ -376,7 +376,7 @@ hey -z 3m -c 50 -m POST -T "application/json" -D request.json http://127.0.0.1:8
 
 
 
-\### HPA Scaling Results
+### HPA Scaling Results
 
 
 
@@ -384,15 +384,15 @@ During load testing, the CPU utilization increased significantly, triggering aut
 
 
 
-The number of replicas increased from \*\*1 to 3 and subsequently to 5\*\*, demonstrating that Kubernetes HPA successfully adjusted the deployment in response to increased CPU demand.
+The number of replicas increased from **1 to 3 and subsequently to 5**, demonstrating that Kubernetes HPA successfully adjusted the deployment in response to increased CPU demand.
 
 
 
-!\[HPA Scaling](screenshots/hpa-scaling.png)
+![HPA Scaling](screenshots/hpa-scaling.png)
 
 
 
-\## 9. Conclusion
+## 9. Conclusion
 
 
 
