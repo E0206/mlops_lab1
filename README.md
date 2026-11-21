@@ -86,9 +86,9 @@ mlops-lab1/
 
 └── screenshots/
 
-&#x20;   ├── mlflow-run.png
+    ├── mlflow-run.png
 
-&#x20;   └── hpa-scaling.png
+    └── hpa-scaling.png
 
 ```
 
@@ -192,11 +192,11 @@ Example prediction request:
 
 {
 
-&#x20; "instances": [
+  "instances": [
 
-&#x20;   [5.1, 3.5, 1.4, 0.2]
+    [5.1, 3.5, 1.4, 0.2]
 
-&#x20; ]
+  ]
 
 }
 
@@ -212,7 +212,7 @@ Example response:
 
 {
 
-&#x20; "predictions": [0]
+  "predictions": [0]
 
 }
 
